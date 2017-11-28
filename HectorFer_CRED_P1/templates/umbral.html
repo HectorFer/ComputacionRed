@@ -1,0 +1,16 @@
+﻿{% extends "layout.html" %}
+  
+{% block content %}
+ <div class="jumbo">
+  <h2>ULTIMO VALOR DEBAJO UMBRAL</h2>
+  <b><center>En esta página se muestra el ultimo valor almacenado en las BBDD's, que esta por debajo del umbral 50.</center></b>
+  	<div id="ultimvalor">
+		<h5 class="h6 text-center">
+			</br>
+			<center>Ultimo Dato recogido:{{Datos}}</center>
+			<p><center>Hora: {{Hora}}</center></p>
+			<p><center>Fecha: {{Fecha}}</center></p>
+		</h5> 
+	</div>
+</div>
+{% endblock %}
