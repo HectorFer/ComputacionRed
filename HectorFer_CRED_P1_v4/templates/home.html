@@ -1,0 +1,41 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+ 
+ <div class="jumbo">
+    <h2>Bienvenidos a la app de valores<h2>
+    <h3>Puede consultar el valor que desee<h3>
+	<div id=umbral>
+		<form action = "." method="POST" name="formuario" >
+			<input name="fijarumbral" id="fijarumbral" type="float" maxlength="2" placeholder="XX" autofocus=""/>
+            <input type="submit" name="botonumb" value="Umbral">
+		<h5>
+			<p>Primer valor almacenado por encima del umbral: {{umbral_umbral}}</p>
+			<p>Hora: {{Hora_umbral}}</p>
+			<p>Fecha: {{Fecha_umbral}}</p>
+		</h5> 
+		<h6>
+			<p>Todos los valores que superan el umbral: {{supera_umbral}}</p>
+		</h6> 
+
+		</form>
+	</div>
+
+  	<div id="valormedio2">
+		<form action = "." method="POST" name="formuariovm" >
+        	<input type="submit" name="mid_value" value="Valor medio">
+		<h5>
+			<p>Valor medio de los valores guardados: {{valor_medio}}</p>
+		</h5> 
+		<h6> 
+			<p>BBDD empleada: {{procedencia}}</p>
+		</h6> 
+		</form>
+	</div>
+
+	<div id="graficasext">
+		</br>
+	       <a class="btn" href="https://beebotte.com/dash/c91099b0-b975-11e7-bfef-6f68fef5ca14#.Wf2bNmjWzIU"> Gráficas externas</a>
+	</div>
+
+</div>
+{% endblock %}
