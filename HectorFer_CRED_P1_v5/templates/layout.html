@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Datos_Azar</title>    
+    <strong><link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"></strong>
+  </head>
+  <body background="static/descarga.jpg">
+
+    <header> 
+      <div class="container">
+        <h1 class="logo">Aplicacion Valores Azar</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('usuario_pulsa_boton') }}">Home</a></li>
+            <li><a href="{{ url_for('umbral') }}">Umbral fijo</a></li>
+            <li><a href="{{ url_for('UltimoValor') }}">Valores del dia</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+     
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>
